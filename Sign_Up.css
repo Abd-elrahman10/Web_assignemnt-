@@ -1,31 +1,123 @@
-body{
-    background-color: antiquewhite ;
+
+:root {
+    --primary-color: #4E2A15;
+    --secondary-color: #D7B899;
+    --accent-color: #A67C52;
+    --light-color: #F5F0E6;
+    --dark-color: #2C1A0D;
+    --text-color: #333;
+    --text-light: #777;
+    --white: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease-in-out;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
 }
 
-.Sign_UP{
-border: red solid;
-border-radius: 50px;
-
-
-
-width: 400px;
-margin: auto;
-margin-top: 100px;
-background-color:chocolate;
-
+.Sign_UP {
+    border: solid #874141 ;
+    padding: 700px;
+    border-radius: 50px;
+    width: 400px;
+   margin-left: 35%;
+    margin-top: 30px;
+    background-color: #2C1A0D;
+    padding: 20px;
+    color: white;
 }
-h1{
-    align:center;
-    padding-left:50% ;
+
+h1 {
+    text-align: center;
 }
-form label{
+
+form label {
     display: flex;
-    margin-top: 20xp;
-    
+    margin-top: 10px;
+    padding-left: 30%;
 }
-form input{
+
+form input {
     border-radius: 7px;
     padding: 7px;
-   margin-left :100px;
-   margin-bottom :70px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+     
+}
+
+/* Radio button styling */
+.radio-group {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 700px;
+}
+
+.radio-group label {
+   
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    gap: 5px;
+   
+}
+.butt{
+    margin-top: 50px;
+margin-left: 35%;
+width: 100px;
+padding: 5px;
+border: solid none;
+border-radius: 7px;
+background-color:#4E2A15;
+color: white;
+font:bold;
+font-size: 15px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo-icon {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+}
+a{
+    text-decoration: none;
+}
+.logo-text {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.logo-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.logo:hover .logo-text::after {
+    width: 100%;
 }
