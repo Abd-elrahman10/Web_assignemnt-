@@ -339,6 +339,7 @@ a {
     cursor: pointer;
     transition: var(--transition);
     text-align: center;
+    width: 100%;
 }
 
 .loginBut:hover {
