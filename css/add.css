@@ -116,10 +116,6 @@ a{
     transition: var(--transition);
 }
 
-.logo:hover .logo-text::after {
-    width: 100%;
-}
-
 .menu ul {
     display: flex;
     list-style: none;
@@ -253,10 +249,13 @@ footer {
             transition: var(--transition);
         }
 .add-book-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5rem 5%;
     max-width: 1200px;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
 }
 .back{
     display: flex;
@@ -269,6 +268,9 @@ footer {
 }
 .add-book-container {
     background-color: var(--white);
+    width: 50% ;
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
     padding: 3rem;
     box-shadow: var(--shadow);

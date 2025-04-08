@@ -280,6 +280,7 @@ a {
     justify-content: center;
 }
 .page-title{
+    margin-top: 30PX;
     font-size: 3rem;
     font-weight: 700;
     color: var(--light-color);

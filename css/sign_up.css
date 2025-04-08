@@ -289,11 +289,17 @@ a {
 }
 
 .radio-options label {
+    color : var(--text-color);
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-weight: normal;
     cursor: pointer;
+}
+.radio-options input[type="radio"] {
+    width: auto;
+    margin: 0;
+    accent-color: var(--primary-color);
 }
 
 .btn-primary {
