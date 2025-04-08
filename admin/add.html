@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book | BORRI</title>
+    <link rel="stylesheet" href="../css/add.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="add.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <nav>
+        <div class="logo">
+            <a id="logo" data-text="Booker" href="index.html">
+                <span class="logo-text">BORRI</span>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="services-item">
+                    <a href="#" tabindex="0">Services</a>
+                    <ul class="services-dropdown">
+                        <li><a href="#"><i class="fas fa-plus-circle" class="active"></i> Add Book</a></li>
+                        <li><a href="edit.html"><i class="fa-regular fa-pen-to-square"></i> Edit Book</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class="back">
+    <section class="add-book-section">
+        <div class="add-book-container">
+            <h2 class="add-book-title">Add a New Book</h2>
+            <p class="subtitle">Enter the information below to add a new book</p>
+            <form class="add-book-form" id="addBookForm">
+                <div class="form-group">
+                    <label for="title">Book Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genre">Category</label>
+                    <select id="genre" name="genre" required>
+                        <option value="">Select a category</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="sci-fi">Science Fiction</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="romance">Romance</option>
+                        <option value="biography">Biography</option>
+                        <option value="history">History</option>
+                        <option value="self-help">Self-Help</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label>Book Cover</label>
+                    <div class="cover-upload" id="coverUpload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Click to upload book cover image</p>
+                        <input type="file" id="coverImage" name="coverImage" accept="image/*" >
+                    </div>
+                    <img id="coverPreview" class="cover-preview" alt="Book cover preview">
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    Add Book <i class="fas fa-plus-circle"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+</div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about" id="about">
+                <h3>About BORRI</h3>
+                <p>Welcome to BORRI, your go-to online book hub! Easily add, browse, and borrow books with a seamless experience. Whether you’re sharing your collection or discovering new reads, we make book access simple and efficient.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BORRI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
