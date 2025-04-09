@@ -8,6 +8,7 @@
     --text-color: #333;
     --text-light: #777;
     --white: #ffffff;
+    --danger-color: #B3412D; 
     --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease-in-out;
 }
@@ -151,47 +152,6 @@ nav {
 .menu ul li a:hover::after {
     width: 100%;
 }
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.search-container {
-    position: relative;
-    margin-right: 1.5rem;
-}
-
-#search {
-    padding: 0.8rem 1.5rem 0.8rem 3rem;
-    border: 1px solid #ddd;
-    border-radius: 50px;
-    width: 200px;
-    transition: var(--transition);
-    font-size: 0.9rem;
-    outline: none;
-}
-
-#search:focus {
-    width: 350px;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(78, 42, 21, 0.1);
-}
-
-.search-btn {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: var(--text-light);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-#search:focus + .search-btn {
-    color: var(--primary-color);
-}
 .hero {
     height: 100vh;
     display: flex;
@@ -293,6 +253,32 @@ nav {
     flex: 1;
 }
 
+.logout-link{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: var(--transition);
+}
+.logout-btn{
+    background-color: var(--danger-color);
+    border-radius: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
 .book-content h2 {
     margin-bottom: 2rem;
     position: relative;
@@ -385,7 +371,7 @@ footer {
             background-color: var(--white);
             box-shadow: var(--shadow);
             border-radius: 5px;
-            width: 300px;
+            width: 500px;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);

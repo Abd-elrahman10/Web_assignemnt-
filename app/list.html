@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | BORRI</title>
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <nav>
+        <div class="logo">
+            <a id="logo" data-text="BORRI" href="../index.html">
+                <span class="logo-text">BORRI</span>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#" class="active">Books</a></li>
+                <li class="services-item">
+                    <a href="#" tabindex="0">Services</a>
+                    <ul class="services-dropdown">
+                        <li><a href="#"><i class="fa-solid fa-list"></i> List Books</a></li>
+                        <li><a href="borrowed.html"><i class="fa-solid fa-list"></i> List Borrowed Books</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <form action="search.php" method="get" style="display: flex; align-items: center;">
+                    <!-- Dropdown for search type -->
+                    <select name="type" id="search-type" style="margin-right: 10px; padding: 0.6rem; border-radius: 25px; border: 1px solid #ddd; font-size: 0.9rem;">
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="category">Category</option>
+                    </select>
+        
+                    <!-- Input for search -->
+                    <div style="position: relative;">
+                        <input type="search" id="search" name="search" placeholder="Search for a book...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+ 
+    <main class="book-container">
+        <h1 class="page-title">List Books</h1>
+                <!-- <div class="book-panels">
+            <div class="panel">
+                <img src="../img/IMG_2877.jpg" alt="The Lost Kings book cover">
+                <div class="panel-content">
+                    <h2>The Lost Kings</h2>
+                    <div class="buttons">
+                        <a href="#borrow1" class="borrow-btn">Borrow</a>
+                        <a href="#book-info1" class="info-btn">More Info</a>
+                    </div>
+                </div>
+            </div>
+    <div id="borrow1" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Borrow The Lost Kings</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name1">Full Name</label>
+                    <input type="text" id="name1" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age1">Age</label>
+                    <input type="number" id="age1" name="age" min="12" max="100" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone1">Phone Number</label>
+                    <input type="tel" id="phone1" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="duration1">How long will you keep the book?</label>
+                    <select id="duration1" name="duration" required>
+                        <option value="">Select duration</option>
+                        <option value="1 week">1 Week</option>
+                        <option value="2 weeks">2 Weeks</option>
+                        <option value="1 month">1 Month</option>
+                        <option value="2 months">2 Months</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason1">Why this specific book?</label>
+                    <textarea id="reason1" name="reason" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+    <div id="book-info1" class="modal">
+        <div class="modal-content book-info-modal">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Book Information</h2>
+            <div class="book-info-grid">
+                <div class="info-item">
+                    <span class="info-label">Book Title:</span>
+                    <span class="info-value">The Lost Kings</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Author:</span>
+                    <span class="info-value">Jane Doe</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Category:</span>
+                    <span class="info-value">Mystery</span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about" id="about">
+                <h3>About BORRI</h3>
+                <p>Welcome to BORRI, your go-to online book hub! Easily add, browse, and borrow books with a seamless experience. Whether you’re sharing your collection or discovering new reads, we make book access simple and efficient.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BORRI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

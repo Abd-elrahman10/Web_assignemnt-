@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books | BORRI</title>
-    <link rel="stylesheet" href="../css/edit.css">
+    <title>BORRI</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -21,9 +21,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="dashboard.html">Home</a></li>
-                <li><a href="dashboard.html" >Admin</a></li>
-                <li><a href="#" class="active">Edit</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Admin</a></li>
                 <li class="services-item">
                     <a href="#" tabindex="0">Services</a>
                     <ul class="services-dropdown">
@@ -38,27 +37,41 @@
             </ul>
 
         </div>
-        <div class="nav-right">
-            <div class="search-container">
-                <form action="search.php" method="get" style="display: flex; align-items: center;">
-                    <select name="type" id="search-type" style="margin-right: 10px; padding: 0.6rem; border-radius: 25px; border: 1px solid #ddd; font-size: 0.9rem;">
-                        <option value="title">Title</option>
-                        <option value="author">Author</option>
-                        <option value="category">Category</option>
-                    </select>
-        
-                    <div style="position: relative;">
-                        <input type="search" id="search" name="search" placeholder="Search for a book...">
-                        <button class="search-btn"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>        
+        <div class="logout-btn">
+            <a href="../index.html" class="logout-link">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
     </nav>
- 
-    <main class="book-container">
-        <h1 class="page-title">Edit Books</h1>
-        </main>
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Discover Worlds Between Pages</h1>
+            <p class="subtitle">Borrow the Story, Keep the Experience.</p>
+            <div class="hero-buttons">
+                <a href="../app/list.html" class="btn-primary">View Books</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="book-section" id="book">
+            <div class="book-container">
+                <div class="book-cover">
+                    <img src="../img/side.jpg" alt="INTER-COM ON STARTING UP Book Cover">
+                </div>
+                <div class="book-content">
+                    <h2>What's inside</h2>
+                    <p>Explore a growing library of books you can borrow online—save space, money, and shelf clutter.</p>
+                    <ul class="content-list">
+                        <li>Quickly create an account or log in to start borrowing instantly.</li>
+                        <li>New books added regularly, based on user interest and community favorites.</li>
+                        <li>And more</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about" id="about">

@@ -22,25 +22,18 @@
         <div class="menu">
             <ul>
                 <li><a href="#" class="active">Home</a></li>
+                <li><a href="/admin/dashboard.html">Admin</a></li>
                 <li><a href="app/login.html">Log In</a></li>
                 <li><a href="app/sign_up.html">Sign up</a></li>
                 <li class="services-item">
                     <a href="#" tabindex="0">Services</a>
                     <ul class="services-dropdown">
-                        <li><a href="admin/add.html"><i class="fas fa-plus-circle"></i> Add Book</a></li>
-                        <li><a href="app/view_book.html"><i class="fas fa-book-open"></i> Borrow Book</a></li>
+                        <li><a href="app/list.html"><i class="fa-solid fa-list"></i> List Books</a></li>
+                        <li><a href="app/borrowed.html"><i class="fa-solid fa-list"></i> List Borrowed Books</a></li>
                     </ul>
                 </li>
                 <li><a href="#about">About</a></li>
             </ul>
-        </div>
-        <div class="nav-right">
-            <div class="search-container">
-                <form action="search.php" method="get">
-                    <input type="search" id="search" name="search" placeholder="Search for a book...">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
         </div>
     </nav>
     <header class="hero" id="hero">
@@ -48,7 +41,7 @@
             <h1>Discover Worlds Between Pages</h1>
             <p class="subtitle">Borrow the Story, Keep the Experience.</p>
             <div class="hero-buttons">
-                <a href="app/view_book.html" class="btn-primary">View Books</a>
+                <a href="app/list.html" class="btn-primary">View Books</a>
                 <a href="app/sign_up.html" class="btn-secondary">Join Our Community</a>
             </div>
         </div>
