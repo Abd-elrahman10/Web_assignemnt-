@@ -269,7 +269,31 @@ a {
     font-size: 1rem;
     transition: var(--transition);
 }
+.form-group .additional {
+    font-size: 14px;
+    color: red;
 
+    
+}
+.success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 4px;
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
 .form-group input:focus {
     outline: none;
     border-color: var(--primary-color);

@@ -12,6 +12,44 @@
     --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease-in-out;
 }
+.borrowed-label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: #999;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 4px;
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.additional {
+    font-size: 14px;
+    color: red;
+
+    
+}
 
 html {
     scroll-behavior: smooth;
@@ -274,12 +312,7 @@ nav {
 .book-container {
     padding: 2rem 5%;
     flex:1;
-    height: 100vh;
-    padding: 0 5%;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/image_fx\ \(1\).jpg') no-repeat center center/cover;
-    color: var(--white);
-    position: relative;
-    text-align: center;
 }
 
 .book-panels {
@@ -289,7 +322,7 @@ nav {
     justify-content: center;
 }
 .page-title{
-    margin-top: 30PX ;
+    margin-top: 8PX ;
     font-size: 3rem;
     font-weight: 700;
     color: var(--light-color);
@@ -303,6 +336,9 @@ nav {
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    justify-content: center;
+    display:inline-block;
+    align-items: center;
 }
 
 .panel:hover {
@@ -390,6 +426,7 @@ nav {
     pointer-events: none;
     transition: var(--transition);
     z-index: 2000;
+    
 }
 
 .modal:target {
@@ -405,6 +442,8 @@ nav {
     max-width: 500px;
     box-shadow: var(--shadow);
     position: relative;
+    max-height: 90vh;
+    overflow-y: auto; 
 }
 
 .close-btn {

@@ -22,13 +22,6 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#" class="active">Log In</a></li>
                 <li><a href="sign_up.html">Sign up</a></li>
-                <li class="services-item">
-                    <a href="#" tabindex="0">Services</a>
-                    <ul class="services-dropdown">
-                      <li><a href="list.html"><i class="fa-solid fa-list"></i> List Books</a></li>
-                      <li><a href="borrowed.html"><i class="fa-solid fa-list"></i> List Borrowed Books</a></li>
-                    </ul>
-                </li>
                 <li><a href="#about">About</a></li>
             </ul>
         </div>
@@ -37,22 +30,21 @@
 <main class="login_main">
     <div class="Log_In">
         <h1>Log In</h1>
-        <form>  
+        <form id = "subform">  
           <label for="username">Username:</label>
-          <input type="text" name="username" placeholder="Enter your username" required>
+          <input type="text" name="username" id="usr" placeholder="Enter your username">
           
           <label for="password">Password</label>
-          <input type="password" name="user_pass" placeholder="Enter your password" required>
-          
+          <input type="password" name="user_pass" id="pass" placeholder="Enter your password">          
     
           <!-- Radio buttons for Admin and User -->
           <div class="radio-group">
             <label>
-              <input type="radio" name="role" value="admin">
+              <input type="radio" name="role" id="adrole" value="admin">
               Admin
             </label>
             <label>
-              <input type="radio" name="role" value="user" checked>
+              <input type="radio" name="role" id="usrole" value="user" checked>
               User
             </label>
           </div>
@@ -76,5 +68,6 @@
         <p>&copy; 2025 BORRI. All rights reserved.</p>
     </div>
 </footer>
+<script src = "../js/login.js"></script>
 </body>
 </html>

@@ -560,6 +560,12 @@ a {
     transform: translateY(10px);
     z-index: 1000;
 }
+.additional {
+    font-size: 14px;
+    color: red;
+
+    
+}
 
 .menu ul li.services-item:hover .services-dropdown,
 .menu ul li.services-item:focus-within .services-dropdown {

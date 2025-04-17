@@ -23,13 +23,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="login.html">Log In</a></li>
             <li><a href="#" class="active">Sign up</a></li>
-            <li class="services-item">
-                <a href="#" tabindex="0">Services</a>
-                <ul class="services-dropdown">
-                  <li><a href="list.html"><i class="fa-solid fa-list"></i> List Books</a></li>
-                  <li><a href="borrowed.html"><i class="fa-solid fa-list"></i> List Borrowed Books</a></li>
-                </ul>
-            </li>
             <li><a href="#about">About</a></li>
         </ul>
     </div>
@@ -37,31 +30,31 @@
   <main class="hero">
       <div class="Sign_UP">
         <h1>Sign Up</h1>
-        <form>
+        <form id="subform">
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" name="username" placeholder="Username" required>
+            <input type="text" name="username" id="usr" placeholder="Username">
           </div>
          
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" name="user_pass" placeholder="Enter your password" required>
+            <input type="password" name="user_pass" id="pass" placeholder="Enter your password">
           </div>
           
-          <div class="form-group">
+          <div class="form-group" >
             <label for="password">Confirm Password</label>
-            <input type="password" name="user_cpass" placeholder="Enter your password" required>
+            <input type="password"name="user_cpass" id="cpass" placeholder="Enter your password">
           </div>
   
           <div class="form-group radio-group">
             <label>Role:</label>
             <div class="radio-options">
               <label>
-                <input type="radio" name="role" value="admin">
+                <input type="radio" name="role" id="adrole" value="admin">
                 Admin
               </label>
               <label>
-                <input type="radio" name="role" value="user" checked>
+                <input type="radio" name="role" id="usrole" value="user" checked>
                 User
               </label>
             </div>
@@ -87,5 +80,6 @@
         <p>&copy; 2025 BORRI. All rights reserved.</p>
     </div>
   </footer>
+  <script src="../js/signup.js"></script>
 </body>
 </html>

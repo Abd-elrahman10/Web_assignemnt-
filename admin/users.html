@@ -57,11 +57,11 @@
     </nav>
  
     <main class="users-container">
-        <h1 class="page-title">Manage Users</h1>
-        
-        <!-- <div class="users-table-container">
+        <h1 id="page-title" class="page-title">Manage Users</h1>
+
+         <div class="users-table-container">
             <table class="users-table">
-                <thead>
+                <thead id = "users-head">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -70,20 +70,8 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>Member</td>
-                        <td>3</td>
-                        <td class="actions">
-                            <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
-                            <button class="delete-btn"><i class="fas fa-trash-alt"></i> Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
             </table>
-        </div> -->
+        </div> 
     </main>
     
     <footer>
@@ -97,7 +85,7 @@
             <p>&copy; 2025 BORRI. All rights reserved.</p>
         </div>
     </footer>
-<!--     
+   
     <div id="editUserModal" class="modal">
         <div class="modal-content">
             <a href="#" class="close-btn">&times;</a>
@@ -105,25 +93,20 @@
             <form id="editUserForm">
                 <input type="hidden" id="editUserId">
                 <div class="form-group">
-                    <label for="editUserName">Name</label>
-                    <input type="text" id="editUserName" required>
-                </div>
-                <div class="form-group">
-                    <label for="editUserEmail">Email</label>
-                    <input type="email" id="editUserEmail" required>
+                    <label for="editUserName">Userame</label>
+                    <input type="text" id="editUserName" minlength="6">
                 </div>
                 <div class="form-group">
                     <label for="editUserRole">Role</label>
                     <select id="editUserRole" required>
-                        <option value="Member">Member</option>
-                        <option value="Admin">Admin</option>
+                        <option value="user">user</option>
+                        <option value="admin" >admin</option>
                     </select>
                 </div>
-                <button type="submit" class="submit-btn">Save Changes</button>
+                <button id="save-btn" type="submit" class="submit-btn">Save Changes</button>
             </form>
         </div>
     </div>
-    
     <div id="deleteUserModal" class="modal">
         <div class="modal-content">
             <a href="#" class="close-btn">&times;</a>
@@ -134,6 +117,7 @@
                 <button id="cancelDelete" class="cancel-btn">Cancel</button>
             </div>
         </div>
-    </div> -->
+    </div>
+    <script src="../js/users.js"></script>
 </body>
 </html>

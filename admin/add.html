@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/add.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="add.js"></script>
+    <script src="../js/add.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -48,21 +48,21 @@
             <form class="add-book-form" id="addBookForm">
                 <div class="form-group">
                     <label for="id">Book ID</label>
-                    <input type="number" id="id" name="id" required>
+                    <input type="number" id="id" name="id">
                 </div>
                 <div class="form-group">
                     <label for="title">Book Title</label>
-                    <input type="text" id="title" name="title" required>
+                    <input type="text" id="title" name="title">
                 </div>
                 
                 <div class="form-group">
                     <label for="author">Author</label>
-                    <input type="text" id="author" name="author" required>
+                    <input type="text" id="author" name="author">
                 </div>
                 
                 <div class="form-group">
                     <label for="genre">Category</label>
-                    <select id="genre" name="genre" required>
+                    <select id="genre" name="genre">
                         <option value="">Select a category</option>
                         <option value="fiction">Fiction</option>
                         <option value="non-fiction">Non-Fiction</option>
@@ -79,20 +79,22 @@
                 
                 <div class="form-group full-width">
                     <label for="description">Description</label>
-                    <textarea id="description" name="description" required></textarea>
+                    <textarea id="description" name="description"></textarea>
                 </div>
                 
                 <div class="form-group full-width">
                     <label>Book Cover</label>
-                    <div class="cover-upload" id="coverUpload">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>Click to upload book cover image</p>
-                        <input type="file" id="coverImage" name="coverImage" accept="image/*" required >
+                    <div class="cover-upload">
+                        <label for="coverImage" class="upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to upload new book cover image</p>
+                            <input type="file" id="coverImage" name="coverImage" accept="image/*" style="display: none;">
+                        </label>
                     </div>
-                    <img id="coverPreview" class="cover-preview" alt="Book cover preview">
-                </div>
+                    <img id="coverPreview" class="cover-preview" alt="New book cover preview" style="display: none;">
+                </div> 
                 
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="submit-btn" onclick="addbook(event)">
                     Add Book <i class="fas fa-plus-circle"></i>
                 </button>
             </form>
