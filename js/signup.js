@@ -1,4 +1,5 @@
 let subform = document.getElementById("subform");  
+
 var role = "user" ;
 const adrole = document.getElementById("adrole").addEventListener("click" , ()=>{
         role = "admin" ;
@@ -8,12 +9,14 @@ const usrole = document.getElementById("usrole").addEventListener("click" , ()=>
         role = "user" ;
         return ;
     } )
+
 subform.addEventListener('submit', function(e) {
     // Prevent default form submission
     e.preventDefault();
     const pass = document.getElementById('pass').value;
     const cpass = document.getElementById('cpass').value;
     let username = document.getElementById("usr").value ;
+    let hasLetter = /[a-zA-Z]/.test(username);
     // Clear any existing error messages
     const existingMsg = document.querySelector('.additional');
     if (existingMsg) {
@@ -22,6 +25,10 @@ subform.addEventListener('submit', function(e) {
     if (username === "" || username < 6){
         showMessage("Username must be at least 6 characters" , 0);
         return false ;
+    }
+    if(!hasLetter){
+        showMessage("Username must has characters (a,b,c,etc..)",0);
+        return false;
     }
     if (role === ""){
         showMessage("Role is required" , 3) ;
